@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FoodyApp</string>
+
+    <string name="recipes_fragment">Recipes</string>
+    <string name="favorites_recipes_fragment">Favorites</string>
+    <string name="food_jokes">Joke</string>
+
+</resources>
