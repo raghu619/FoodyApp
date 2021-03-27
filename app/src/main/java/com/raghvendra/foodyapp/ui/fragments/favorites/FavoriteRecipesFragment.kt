@@ -1,18 +1,20 @@
-package com.raghvendra.foodyapp
+package com.raghvendra.foodyapp.ui.fragments.favorites
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import com.raghvendra.foodyapp.R
+import kotlinx.android.synthetic.main.fragment_recipes.view.*
 
 
 /**
  * A simple [Fragment] subclass.
- * Use the [FoodJokeFragment.newInstance] factory method to
+ * Use the [FavoriteRecipesFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FoodJokeFragment : Fragment() {
+class FavoriteRecipesFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +26,10 @@ class FoodJokeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_food_joke, container, false)
+
+         val view =  inflater.inflate(R.layout.fragment_favorite_recipes, container, false)
+
+        return view
     }
 
 
