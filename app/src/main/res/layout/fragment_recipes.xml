@@ -7,9 +7,8 @@
     android:background="@color/lightGray"
     tools:context=".ui.fragments.recipes.RecipesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <com.todkars.shimmer.ShimmerRecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -45,9 +44,9 @@
         android:src="@drawable/ic_sad"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/recycler_view"
-        app:layout_constraintStart_toStartOf="@+id/recycler_view"
-        app:layout_constraintTop_toTopOf="@+id/recycler_view"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerview"
+        app:layout_constraintStart_toStartOf="@+id/recyclerview"
+        app:layout_constraintTop_toTopOf="@+id/recyclerview"
         app:layout_constraintVertical_bias="0.37" />
 
     <TextView
