@@ -2,13 +2,16 @@ package com.raghvendra.foodyapp.data.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-
+import androidx.room.TypeConverters
 
 @Database(
-    entities = [RecipesEntity::class],
-    version = 1,
-    exportSchema = false
+entities = [RecipesEntity::class],
+version = 1,
+exportSchema = false
 )
-abstract class RecipesDatabase() : RoomDatabase() {
-    abstract fun recipesDao(): RecipesDao
+@TypeConverters(RecipesTypeConverter::class)
+abstract class RecipesDatabase: RoomDatabase() {
+
+   abstract fun recipesDao(): RecipesDao
+
 }

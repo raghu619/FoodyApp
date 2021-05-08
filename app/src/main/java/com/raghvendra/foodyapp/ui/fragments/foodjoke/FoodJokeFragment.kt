@@ -8,16 +8,10 @@ import androidx.fragment.app.Fragment
 import com.raghvendra.foodyapp.R
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FoodJokeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FoodJokeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
