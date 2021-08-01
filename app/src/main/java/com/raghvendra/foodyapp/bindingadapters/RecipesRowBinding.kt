@@ -12,6 +12,7 @@ import coil.load
 import com.raghvendra.foodyapp.R
 import com.raghvendra.foodyapp.models.Result
 import com.raghvendra.foodyapp.ui.fragments.recipes.RecipesFragmentDirections
+import org.jsoup.Jsoup
 
 class RecipesRowBinding {
 
@@ -19,13 +20,14 @@ class RecipesRowBinding {
 
         @BindingAdapter("onRecipeClickListener")
         @JvmStatic
-        fun onRecipeClickListener(recipeRowLayout:ConstraintLayout, result:Result){
+        fun onRecipeClickListener(recipeRowLayout: ConstraintLayout, result: Result) {
             recipeRowLayout.setOnClickListener {
                 try {
-                   val action = RecipesFragmentDirections.actionRecipesFragmentToDetailsActivity(result)
+                    val action =
+                        RecipesFragmentDirections.actionRecipesFragmentToDetailsActivity(result)
                     recipeRowLayout.findNavController().navigate(action)
-                } catch (e:Exception){
-                    Log.d("onRecipeClickListener",e.toString())
+                } catch (e: Exception) {
+                    Log.d("onRecipeClickListener", e.toString())
                 }
             }
         }
@@ -33,8 +35,8 @@ class RecipesRowBinding {
 
         @BindingAdapter("loadImageFromUrl")
         @JvmStatic
-        fun loadImageFromUrl(imageView: ImageView,imageUrl:String){
-            imageView.load(imageUrl){
+        fun loadImageFromUrl(imageView: ImageView, imageUrl: String) {
+            imageView.load(imageUrl) {
                 crossfade(600)
                 error(R.drawable.ic_error_placeholder)
             }
@@ -67,6 +69,16 @@ class RecipesRowBinding {
                 }
             }
 
+        }
+
+
+        @BindingAdapter("parseHtml")
+        @JvmStatic
+        fun parseHtml(textView: TextView, description: String?) {
+            if (description != null) {
+                val desc = Jsoup.parse(description).text()
+                textView.text = desc
+            }
         }
     }
 }

@@ -3,9 +3,9 @@ package com.raghvendra.foodyapp.util
 import androidx.recyclerview.widget.DiffUtil
 import com.raghvendra.foodyapp.models.Result
 
-class RecipesDiffutil(
-    private val oldList: List<Result>,
-    private val newList: List<Result>
+class RecipesDiffUtil<T>(
+    private val oldList: List<T>,
+    private val newList: List<T>
 ): DiffUtil.Callback() {
     override fun getOldListSize(): Int {
        return oldList.size
