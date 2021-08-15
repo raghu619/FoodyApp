@@ -26,7 +26,12 @@
     <color name="actionBarBackgroundColor">@color/colorPrimary</color>
     <color name="strokeColor">@color/lightMediumGray</color>
     <color name="cardBackgroundColor">@color/white</color>
+<!-- 10 from 106200EA- means it will take 10% of color 6200EA-->
+    <color name="cardBackgroundLightColor">#106200EA</color>
     <color name="titleColor">@color/darker</color>
+    <color name="statusBarColor">@color/colorPrimaryDark</color>
+    <color name="contextualStatusBarColor">@color/darker</color>
+    <color name="contextualActionBarColor">@color/dark</color>
 
 
 </resources>

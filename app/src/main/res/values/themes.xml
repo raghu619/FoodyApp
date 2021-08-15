@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="actionModeBackground">@color/contextualActionBarColor</item>
         <!-- Secondary brand color. -->
        4
         <item name="colorOnSecondary">@color/black</item>
