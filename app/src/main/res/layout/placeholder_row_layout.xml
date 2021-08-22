@@ -10,7 +10,7 @@
         android:layout_width="146dp"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
-        android:background="@color/lightMediumGray"
+        android:background="@color/placeholderColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:background="@color/lightMediumGray"
+        android:background="@color/placeholderColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -35,7 +35,7 @@
         android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_marginTop="12dp"
-        android:background="@color/lightMediumGray"
+        android:background="@color/placeholderColor"
         app:layout_constraintEnd_toEndOf="@+id/recipes_placeholder_view_two"
         app:layout_constraintStart_toStartOf="@+id/recipes_placeholder_view_two"
         app:layout_constraintTop_toBottomOf="@+id/recipes_placeholder_view_two" />
@@ -46,7 +46,7 @@
         android:layout_height="36dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="12dp"
-        android:background="@color/lightMediumGray"
+        android:background="@color/placeholderColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/recipes_placeholder_view_three"
         app:layout_constraintTop_toBottomOf="@+id/recipes_placeholder_view_three" />
@@ -56,7 +56,7 @@
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginStart="24dp"
-        android:background="@color/lightMediumGray"
+        android:background="@color/placeholderColor"
         app:layout_constraintStart_toEndOf="@+id/recipes_placeholder_view_four"
         app:layout_constraintTop_toTopOf="@+id/recipes_placeholder_view_four" />
 
@@ -65,7 +65,7 @@
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginStart="24dp"
-        android:background="@color/lightMediumGray"
+        android:background="@color/placeholderColor"
         app:layout_constraintStart_toEndOf="@+id/recipes_placeholder_view_five"
         app:layout_constraintTop_toTopOf="@+id/recipes_placeholder_view_five" />
 </androidx.constraintlayout.widget.ConstraintLayout>
