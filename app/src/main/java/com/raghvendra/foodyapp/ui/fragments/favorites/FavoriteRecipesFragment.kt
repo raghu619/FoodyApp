@@ -12,8 +12,7 @@ import com.raghvendra.foodyapp.adapters.FavoriteRecipesAdapter
 import com.raghvendra.foodyapp.databinding.FragmentFavoriteRecipesBinding
 import com.raghvendra.foodyapp.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_favorite_recipes.view.*
-import kotlinx.android.synthetic.main.fragment_recipes.view.*
+
 
 
 /**
@@ -39,7 +38,7 @@ class FavoriteRecipesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentFavoriteRecipesBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
@@ -78,8 +77,8 @@ class FavoriteRecipesFragment : Fragment() {
             .show()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         _binding = null
         mAdapter.clearContextualActionMode()
     }

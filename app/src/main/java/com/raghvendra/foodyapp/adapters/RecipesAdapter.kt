@@ -38,7 +38,6 @@ class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentRecipe = recipes.get(position)
         holder.bind(currentRecipe)
-
     }
 
     override fun getItemCount(): Int {

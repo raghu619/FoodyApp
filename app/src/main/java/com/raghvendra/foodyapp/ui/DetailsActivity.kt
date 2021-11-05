@@ -13,18 +13,19 @@ import com.google.android.material.snackbar.Snackbar
 import com.raghvendra.foodyapp.R
 import com.raghvendra.foodyapp.adapters.PagerAdapter
 import com.raghvendra.foodyapp.data.database.entities.FavoritesEntity
+import com.raghvendra.foodyapp.databinding.ActivityDetailsBinding
 import com.raghvendra.foodyapp.ui.fragments.ingredients.IngredientsFragment
 import com.raghvendra.foodyapp.ui.fragments.instructions.InstructionsFragment
 import com.raghvendra.foodyapp.ui.fragments.overview.OverViewFragment
-import com.raghvendra.foodyapp.util.Constants
 import com.raghvendra.foodyapp.util.Constants.Companion.RECIPE_RESULT_KEY
 import com.raghvendra.foodyapp.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_details.*
 import java.lang.Exception
 
 @AndroidEntryPoint
 class DetailsActivity : AppCompatActivity() {
+
+    private lateinit var binding :ActivityDetailsBinding
     private val args by navArgs<DetailsActivityArgs>()
     private val mainViewModel: MainViewModel by viewModels()
     private var recipeSaved = false
@@ -32,9 +33,10 @@ class DetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_details)
-        setSupportActionBar(toolbar)
-        toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white))
+        binding = ActivityDetailsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
+        binding.toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val fragments = ArrayList<Fragment>()
@@ -56,8 +58,8 @@ class DetailsActivity : AppCompatActivity() {
             titles,
             supportFragmentManager
         )
-        viewPager.adapter = adapter
-        tabLayout.setupWithViewPager(viewPager)
+        binding.viewPager.adapter = adapter
+        binding.tabLayout.setupWithViewPager(binding.viewPager)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -119,7 +121,7 @@ class DetailsActivity : AppCompatActivity() {
 
     private fun showSnackbar(message: String) {
         Snackbar.make(
-            detailsLayout,
+           binding.detailsLayout,
             message,
             Snackbar.LENGTH_SHORT
 
